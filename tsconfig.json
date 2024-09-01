@@ -29,7 +29,7 @@
     "types": [
       "webidl-conversions",
       "webidl-url"
-    ],
+    ]
   },
 
   "angularCompilerOptions": {
