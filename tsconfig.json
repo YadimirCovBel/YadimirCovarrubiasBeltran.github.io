@@ -27,9 +27,8 @@
       "node_modules/@types"
     ],
     "types": [
-      "webidl-conversions",
-      "webidl-url"
-    ]
+      "webidl-conversions"
+      ]
   },
 
   "angularCompilerOptions": {
