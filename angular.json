@@ -11,11 +11,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/cv-project",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "cv-project:build"
+            "buildTarget": "cv-project:build"  
           }
         },
         "test": {
@@ -102,7 +102,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "repo": "https://github.com/YadimirCovBel/YadimirCovarrubiasBeltran.github.io.git",
-            "baseHref": "/YadimirCovarrubiasBeltran.github.io/"
+            "baseHref": "/"
           }
 
         }
