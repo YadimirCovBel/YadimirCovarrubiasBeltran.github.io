@@ -31,6 +31,18 @@
       ]
   },
 
+  "include": [
+    "src/**/*.ts",
+    "server.ts",
+    "src/main.server.ts",
+    "src/app/app.config.server.ts",
+    "src/app/app.config.ts"
+  ],
+  "exclude": [
+    "node_module",
+    "dist"
+  ],
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
