@@ -22,8 +22,25 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "webidl-conversions"
+    ],
   },
+  "include": [
+    "src/**/*.ts", // Added to include all TypeScript files in the src directory
+    "server.ts", // Added to include server.ts file
+    "src/main.server.ts", // Added to include main.server.ts file
+    "src/app/app.config.server.ts", // Added to include app.config.server.ts file
+    "src/app/app.config.ts" // Added to include app.config.ts file
+  ],
+  "exclude": [
+    "node_modules", // Added to exclude node_modules directory
+    "dist" // Added to exclude dist directory
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
