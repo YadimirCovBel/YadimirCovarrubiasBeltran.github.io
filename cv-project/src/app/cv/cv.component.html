@@ -1,1 +1,47 @@
-<p>cv works!</p>
+<div #cvContainer>
+    <h1>{{ cvData.personalInformation.name }}</h1>
+    <p>Email: {{ cvData.personalInformation.email }}</p>
+    <p>Tel: {{ cvData.personalInformation.tel }}</p>
+    <a href="{{ cvData.personalInformation.personalRepo }}">GitHub</a>
+  
+    <h2>Nationality</h2>
+    <ul>
+      <li *ngFor="let nationality of cvData.nationality">{{ nationality }}</li>
+    </ul>
+  
+    <h2>Travel Documentation</h2>
+    <ul>
+      <li *ngFor="let doc of cvData.travelDocumentation">{{ doc }}</li>
+    </ul>
+  
+    <h2>Education</h2>
+    <p>{{ cvData.education }}</p>
+  
+    <h2>Skills</h2>
+    <h3>Languages</h3>
+    <ul>
+      <li *ngFor="let language of cvData.skills.languages">{{ language }}</li>
+    </ul>
+  
+    <h3>Software Development</h3>
+    <ul>
+      <li *ngFor="let skill of cvData.skills.softwareDevelopment">{{ skill }}</li>
+    </ul>
+  
+    <h3>Management Skills</h3>
+    <ul>
+      <li *ngFor="let managementSkill of cvData.skills.managementSkills">{{ managementSkill }}</li>
+    </ul>
+  
+    <h2>Work Experience</h2>
+    <div *ngFor="let experience of cvData.workExperience">
+      <h3>{{ experience.company }}</h3>
+      <p>{{ experience.location }}</p>
+      <p>{{ experience.period }}</p>
+      <p>{{ experience.position }}</p>
+      <ul>
+        <li *ngFor="let responsibility of experience.responsibilities">{{ responsibility }}</li>
+      </ul>
+    </div>
+  </div>
+  
