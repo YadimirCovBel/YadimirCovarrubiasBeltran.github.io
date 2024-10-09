@@ -26,7 +26,7 @@ export class CvComponent implements OnInit,AfterViewInit {
   }
 
   loadJsonData(){
-    this.http.get('assets/cvcontent.json').subscribe(data => {
+    this.http.get('assets/cv-content.json').subscribe(data => {
       this.cvData =data;
       setTimeout(() => this.adjustFontSize(), 0);
     });
@@ -34,9 +34,9 @@ export class CvComponent implements OnInit,AfterViewInit {
 
   adjustFontSize(){
     const container = this.cvContainer.nativeElement;
-    const maxFontSize = 16; //maximum font size in pixel
-    const minFontSize = 10; //minimum font size in pizel
-    const maxHieght = 27.94 * 37.795275591; //maximum hight in pixel
+    const maxFontSize = 16; //maximum font size in pixels
+    const minFontSize = 10; //minimum font size in pixels
+    const maxHeight = 27.94 * 37.795275591; //maximum height in pixels
 
     let fontSize = maxFontSize;
     container.style.fontSize = `${fontSize}px`;
@@ -44,12 +44,12 @@ export class CvComponent implements OnInit,AfterViewInit {
     console.log('initial scrollHeight:', container.scrollHeight);
     console.log('initial fontSize:', fontSize);
 
-    while (container.scrollHeight > maxHieght && fontSize > minFontSize) {
+    while (container.scrollHeight > maxHeight && fontSize > minFontSize) {
       fontSize--;
-      container.style.fontSize == `${fontSize}pz`;
+      container.style.fontSize = `${fontSize}px`;
       console.log('Adjusted fontSize:', fontSize);
     }
-    console.log('Final scrollHieght:', container.scrollHeight);
+    console.log('Final scrollHeight:', container.scrollHeight);
 
   }
 
