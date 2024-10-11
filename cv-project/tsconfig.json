@@ -32,9 +32,6 @@
   },
   "include": [
     "src/**/*.ts", // Added to include all TypeScript files in the src directory
-    "server.ts", // Added to include server.ts file
-    "src/main.server.ts", // Added to include main.server.ts file
-    "src/app/app.config.server.ts", // Added to include app.config.server.ts file
     "src/app/app.config.ts" // Added to include app.config.ts file
   ],
   "exclude": [
