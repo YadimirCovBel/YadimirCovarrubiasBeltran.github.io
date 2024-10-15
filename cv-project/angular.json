@@ -47,7 +47,13 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "scripts": [
+                {
+                  "input": "post-build.js", 
+                  "bundleName": "post-build"
+                }
+              ]
             },
             "development": {
               "optimization": false,
